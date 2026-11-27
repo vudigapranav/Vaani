@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vaani is an AI phone receptionist for restaurant table bookings and doctor appointments in Telugu, Hindi, and Indian English."
+    />
+    <meta name="theme-color" content="#12130f" />
+    <meta property="og:title" content="Vaani — Bookings, by voice" />
+    <meta
+      property="og:description"
+      content="Tell Vaani what you need. Hear what is available. Confirm the time."
+    />
+    <meta property="og:type" content="website" />
+    <title>Vaani — Bookings, by voice</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Vaani",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "An AI phone receptionist for restaurant table bookings and hospital or doctor appointments."
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Vaani home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 16h3l3-8 5 16 5-12 3 4h5" />
+        </svg>
+        <span>vaani</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#how">How it works</a>
+        <a href="#services">Services</a>
+        <a href="#example">Example call</a>
+        <a href="#languages">Languages</a>
+      </nav>
+
+      <a class="header-cta" href="/voice-test" data-voice-link>
+        <span>Talk to Vaani</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M3 8h9M9 4l4 4-4 4" />
+        </svg>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+      <nav aria-label="Mobile navigation">
+        <a href="/voice-test" data-voice-link>Talk to Vaani</a>
+        <a href="#how">How it works</a>
+        <a href="#services">Services</a>
+        <a href="#example">Example call</a>
+        <a href="#languages">Languages</a>
+      </nav>
+      <p>Speak. Listen. Confirm.</p>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            AI phone receptionist · Built for India
+          </p>
+          <h1 id="hero-title">
+            <span class="hero-line"><span>Bookings,</span></span>
+            <span class="hero-line"><span>by voice.</span></span>
+          </h1>
+          <p class="hero-intro">
+            Tell Vaani what you need—in Telugu, Hindi, or Indian English. Hear what is
+            available. Confirm the time.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/voice-test" data-voice-link>
+              <span>Talk to Vaani</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 10h11M11 6l4 4-4 4" />
+              </svg>
+            </a>
+            <a class="text-link" href="#example">
+              Try an example call
+              <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+          <div class="hero-languages" aria-label="Supported languages">
+            <span>తెలుగు</span>
+            <span>हिन्दी</span>
+            <span>Indian English</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Illustration of a Vaani voice call">
+          <div class="hero-orbit" data-orbit>
+            <svg class="orbit-lines" viewBox="0 0 620 620" aria-hidden="true">
+              <circle class="orbit-circle orbit-circle-one" cx="310" cy="310" r="226" />
+              <circle class="orbit-circle orbit-circle-two" cx="310" cy="310" r="170" />
+              <path class="orbit-thread" d="M102 412C120 238 204 118 334 122c133 4 207 123 175 252-25 100-116 153-218 115-103-38-129-135-73-205 46-59 133-65 181-17" />
+            </svg>
+
+            <div class="voice-core">
+              <span class="core-label">LISTENING</span>
+              <div class="wave-field" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <strong>vaani</strong>
+              <span class="core-label">VOICE RECEPTIONIST</span>
+            </div>
+
+            <div class="orbit-chip orbit-chip-hello">
+              <span class="chip-icon" aria-hidden="true">↗</span>
+              <span><small>YOU SAY</small>“A table for two”</span>
+            </div>
+            <div class="orbit-chip orbit-chip-time">
+              <span class="chip-icon" aria-hidden="true">◷</span>
+              <span><small>VAANI SAYS</small>“7:30 is available”</span>
+            </div>
+            <div class="orbit-chip orbit-chip-confirm">
+              <span class="chip-icon" aria-hidden="true">✓</span>
+              <span><small>CONFIRMED</small>Saturday, 7:30 PM</span>
+            </div>
+          </div>
+
+          <p class="visual-caption">
+            <span aria-hidden="true">✦</span>
+            Illustrative interaction — not a live call
+          </p>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Follow the call</span>
+          <div class="scroll-cue-line"><i></i></div>
+        </div>
+      </section>
+
+      <section class="manifesto section-pad" aria-labelledby="manifesto-title">
+        <div class="section-index" aria-hidden="true">01 / THE IDEA</div>
+        <div class="manifesto-grid">
+          <h2 id="manifesto-title">
+            The phone already knows
+            <span>what you need.</span>
+            <em>Now it can act on it.</em>
+          </h2>
+          <div class="manifesto-copy">
+            <p>
+              Vaani is an AI phone receptionist for the moments people cannot postpone: finding
+              a table and seeing a doctor.
+            </p>
+            <p>
+              No app hunt. No unfamiliar form. Just a natural call in the language you already
+              speak.
+            </p>
+            <a class="arrow-link" href="#how">
+              <span>See how the flow works</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="principle-row" aria-label="Vaani principles">
+          <article>
+            <span class="principle-number">01</span>
+            <h3>Speak naturally</h3>
+            <p>Say the request the way you would to a person.</p>
+          </article>
+          <article>
+            <span class="principle-number">02</span>
+            <h3>Hear the options</h3>
+            <p>Get useful availability, not a dead end.</p>
+          </article>
+          <article>
+            <span class="principle-number">03</span>
+            <h3>Confirm the time</h3>
+            <p>Leave the call knowing the next moment is set.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="journey" id="how" aria-labelledby="journey-title">
+        <div class="journey-head section-pad">
+          <div>
+            <p class="eyebrow eyebrow-light">One call. Four clear moves.</p>
+            <h2 id="journey-title">From a spoken thought<br />to a confirmed time.</h2>
+          </div>
+          <p>
+            The flow stays simple because the technology does the complex work behind the
+            conversation.
+          </p>
+        </div>
+
+        <div class="journey-layout section-pad">
+          <div class="journey-device-wrap">
+            <div class="journey-device" data-journey-device>
+              <div class="device-topline">
+                <span>VAANI</span>
+                <span class="device-example">ILLUSTRATIVE DEMO</span>
+              </div>
+              <div class="device-stage-label" data-journey-label>STEP 01 · YOUR REQUEST</div>
+              <div class="device-wave" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="device-transcript" data-journey-transcript aria-live="polite">
+                “Hi, I’d like a table for two tonight.”
+              </div>
+              <div class="device-options" data-journey-options>
+                <span>6:30 PM</span><span>7:30 PM</span><span>8:00 PM</span>
+              </div>
+              <div class="device-confirm" data-journey-confirm>
+                <span>7:30 PM selected</span>
+                <strong>Confirm time</strong>
+              </div>
+              <div class="device-progress" aria-hidden="true">
+                <i data-journey-progress></i>
+              </div>
+            </div>
+            <p class="device-note">Example flow and availability. No booking is made.</p>
+          </div>
+
+          <div class="journey-steps">
+            <article class="journey-step is-active" data-journey-step="0">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Say it your way.</h3>
+                <p>
+                  The caller asks for a table, a doctor, or an appointment in a familiar language.
+                  No menu of forms to decode.
+                </p>
+                <span class="step-detail">Telugu · Hindi · Indian English</span>
+              </div>
+            </article>
+            <article class="journey-step" data-journey-step="1">
+              <span class="step-number">02</span>
+              <div>
+                <h3>Vaani understands the intent.</h3>
+                <p>
+                  The request becomes useful context: party size, date, service, and the kind of
+                  time the caller needs.
+                </p>
+                <span class="step-detail">Context, not keywords</span>
+              </div>
+            </article>
+            <article class="journey-step" data-journey-step="2">
+              <span class="step-number">03</span>
+              <div>
+                <h3>Hear real options.</h3>
+                <p>
+                  The caller hears available times in the same conversation and can choose the
+                  option that suits.
+                </p>
+                <span class="step-detail">Clear, spoken choices</span>
+              </div>
+            </article>
+            <article class="journey-step" data-journey-step="3">
+              <span class="step-number">04</span>
+              <div>
+                <h3>Confirm. Carry on.</h3>
+                <p>
+                  One final confirmation turns the request into a planned moment—without making
+                  the caller repeat themselves.
+                </p>
+                <span class="step-detail">A simple, clear close</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section-pad" id="services" aria-labelledby="services-title">
+        <div class="section-index" aria-hidden="true">02 / TWO WAYS TO USE VAANI</div>
+        <div class="services-heading">
+          <h2 id="services-title">Two everyday needs.<br /><span>One familiar voice.</span></h2>
+          <p>
+            Vaani starts with the context of your business, then helps each caller reach the
+            right next step.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card service-card-dining">
+            <div class="service-copy">
+              <span class="service-kicker">RESTAURANT TABLES</span>
+              <h3>A table,<br />without the hold music.</h3>
+              <p>
+                From “a table for four tonight” to a confirmed table, Vaani understands natural
+                requests, offers available times, and takes the next step.
+              </p>
+              <ul>
+                <li>Party size & preferred time</li>
+                <li>Available table options</li>
+                <li>A confirmed booking time</li>
+              </ul>
+            </div>
+            <div class="service-art table-art" aria-hidden="true">
+              <div class="art-note">AVAILABLE TABLES</div>
+              <div class="table-floor">
+                <span class="floor-table table-a"><i>2</i></span>
+                <span class="floor-table table-b"><i>4</i></span>
+                <span class="floor-table table-c"><i>2</i></span>
+                <span class="floor-table table-d"><i>6</i></span>
+                <span class="floor-table table-e"><i>4</i></span>
+              </div>
+              <div class="art-confirm"><span>✓</span> 7:30 PM confirmed</div>
+            </div>
+          </article>
+
+          <article class="service-card service-card-care">
+            <div class="service-copy">
+              <span class="service-kicker">HOSPITAL & DOCTOR APPOINTMENTS</span>
+              <h3>Care that starts<br />before you arrive.</h3>
+              <p>
+                For appointments, Vaani helps callers understand available slots and confirm a
+                time—so the front desk can stay focused on people already in the care system.
+              </p>
+              <ul>
+                <li>Doctor or department request</li>
+                <li>Available appointment slots</li>
+                <li>A confirmed time to visit</li>
+              </ul>
+            </div>
+            <div class="service-art calendar-art" aria-hidden="true">
+              <div class="calendar-top"><span>APPOINTMENTS</span><i></i><i></i><i></i></div>
+              <div class="calendar-row"><span>09:30</span><b></b><em>Available</em></div>
+              <div class="calendar-row is-selected"><span>11:00</span><b></b><em>Selected</em></div>
+              <div class="calendar-row"><span>03:30</span><b></b><em>Available</em></div>
+              <div class="calendar-row muted"><span>04:15</span><b></b><em>Available</em></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="phone-first" aria-labelledby="phone-first-title">
+        <div class="phone-first-sticky">
+          <div class="phone-first-head section-pad">
+            <p class="eyebrow eyebrow-light">WHY PHONE-FIRST?</p>
+            <h2 id="phone-first-title">The shortest path<br />is a conversation.</h2>
+          </div>
+          <div class="phone-first-rail" data-phone-rail>
+            <article class="reason-card reason-card-a">
+              <span class="reason-index">01</span>
+              <div class="reason-symbol" aria-hidden="true">◌</div>
+              <h3>Callers stay<br />on familiar ground.</h3>
+              <p>Voice removes the friction of learning a new interface.</p>
+            </article>
+            <article class="reason-card reason-card-b">
+              <span class="reason-index">02</span>
+              <div class="reason-symbol" aria-hidden="true">⌁</div>
+              <h3>Availability<br />becomes dialogue.</h3>
+              <p>People can ask, listen, and choose without navigating screens.</p>
+            </article>
+            <article class="reason-card reason-card-c">
+              <span class="reason-index">03</span>
+              <div class="reason-symbol" aria-hidden="true">✓</div>
+              <h3>Every answer<br />keeps context.</h3>
+              <p>No repeating the request to a different channel or another person.</p>
+            </article>
+            <article class="reason-card reason-card-d">
+              <span class="reason-index">04</span>
+              <div class="reason-symbol" aria-hidden="true">↗</div>
+              <h3>Teams get<br />time back.</h3>
+              <p>Routine booking questions move away from the front desk.</p>
+            </article>
+          </div>
+          <div class="rail-progress section-pad" aria-hidden="true"><i data-rail-progress></i></div>
+        </div>
+      </section>
+
+      <section class="example section-pad" id="example" aria-labelledby="example-title">
+        <div class="section-index" aria-hidden="true">03 / INTERACTIVE EXAMPLE</div>
+        <div class="example-heading">
+          <div>
+            <p class="eyebrow">The shape of a call</p>
+            <h2 id="example-title">Choose a language.<br />Hear the conversation.</h2>
+          </div>
+          <p>
+            This is a visual simulation of the product experience. It does not place a call or
+            create a real booking.
+          </p>
+        </div>
+
+        <div class="demo-shell" data-demo>
+          <div class="demo-controls">
+            <div class="control-group">
+              <span class="control-label">I need to</span>
+              <div class="segmented" role="tablist" aria-label="Choose a service">
+                <button
+                  class="is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="demo-screen"
+                  data-service="restaurant"
+                >
+                  Book a table
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="demo-screen"
+                  data-service="care"
+                >
+                  See a doctor
+                </button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <span class="control-label">Speak in</span>
+              <div class="language-tabs" role="tablist" aria-label="Choose a language">
+                <button
+                  class="is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="demo-screen"
+                  data-language="te"
+                >
+                  <span lang="te">తెలుగు</span><small>Telugu</small>
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="demo-screen"
+                  data-language="hi"
+                >
+                  <span lang="hi">हिन्दी</span><small>Hindi</small>
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="demo-screen"
+                  data-language="en"
+                >
+                  <span>English</span><small>Indian English</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="demo-explanation" data-demo-explanation>
+              <span>WHAT VAANI HEARS</span>
+              <p>“Table for two, this evening.”</p>
+              <small>Intent, party size, and timing</small>
+            </div>
+
+            <div class="demo-controls-actions">
+              <button class="play-button" type="button" data-demo-play>
+                <span class="play-icon" aria-hidden="true">▶</span>
+                <span data-play-label>Play demo flow</span>
+              </button>
+              <button class="next-button" type="button" data-demo-next>
+                Next step
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 5l4 4-4 4" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="demo-phone" id="demo-screen" role="tabpanel" aria-live="polite">
+            <div class="demo-phone-top">
+              <span class="demo-brand"><i></i> vaani</span>
+              <span class="demo-status"><i></i> EXAMPLE CALL</span>
+            </div>
+            <div class="demo-caller">
+              <span data-demo-business>THE INDIAN TABLE</span>
+              <strong data-demo-number>+91 98765 43210</strong>
+            </div>
+            <div class="demo-wave" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="demo-turn">
+              <span data-demo-speaker>CALLER</span>
+              <p data-demo-text lang="en">Hi, I’d like a table for two tonight.</p>
+            </div>
+            <div class="demo-slot-area">
+              <span class="demo-slot-label">EXAMPLE AVAILABLE TIMES</span>
+              <div class="demo-slots" data-demo-slots></div>
+            </div>
+            <div class="demo-confirm-row">
+              <button type="button" data-demo-confirm>Confirm 7:30 PM</button>
+              <span data-demo-selection>Select a time</span>
+            </div>
+            <div class="demo-disclaimer">
+              <span aria-hidden="true">i</span>
+              Visual example only. No call or booking is placed.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="languages section-pad" id="languages" aria-labelledby="languages-title">
+        <div class="language-orbit language-orbit-one" aria-hidden="true"></div>
+        <div class="language-orbit language-orbit-two" aria-hidden="true"></div>
+        <div class="section-index" aria-hidden="true">04 / LANGUAGE FIRST</div>
+        <div class="languages-heading">
+          <h2 id="languages-title">Say it like<br /><em>you mean it.</em></h2>
+          <div>
+            <p>
+              Vaani is being built around how people actually call—one natural request at a time,
+              in the language that feels most comfortable.
+            </p>
+            <div class="language-list" aria-label="Supported languages">
+              <span><i>త</i> తెలుగు</span>
+              <span><i>ह</i> हिन्दी</span>
+              <span><i>En</i> Indian English</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="language-examples" id="language-examples">
+          <article class="language-card is-active" data-language-card="te">
+            <span class="language-code">TE</span>
+            <p lang="te">“నాలుగు జనకు టేబుల్ కావాలి.”</p>
+            <small>“I need a table for four.”</small>
+          </article>
+          <article class="language-card" data-language-card="hi">
+            <span class="language-code">HI</span>
+            <p lang="hi">“चार लोगों के लिए टेबल चाहिए।”</p>
+            <small>“I need a table for four.”</small>
+          </article>
+          <article class="language-card" data-language-card="en">
+            <span class="language-code">EN</span>
+            <p>“I need a table for four.”</p>
+            <small>Indian English, understood naturally.</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing section-pad" aria-labelledby="closing-title">
+        <div class="closing-top">
+          <p class="eyebrow eyebrow-light">THE IDEA BEHIND VAANI</p>
+          <p class="closing-side-note">
+            A phone-first way to book—for people and the teams serving them.
+          </p>
+        </div>
+        <h2 id="closing-title">
+          Good service begins<br />
+          with <span>being heard.</span>
+        </h2>
+        <div class="closing-bottom">
+          <p>
+            We are building Vaani for restaurant and healthcare teams who want every caller to
+            feel understood, not processed.
+          </p>
+          <a class="button button-acid" href="#example">
+            <span>Hear an example call</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>
+          </a>
+        </div>
+        <div class="closing-word" aria-hidden="true">vaani</div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-pad">
+      <div class="footer-top">
+        <a class="brand brand-footer" href="#top" aria-label="Vaani home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 16h3l3-8 5 16 5-12 3 4h5" />
+          </svg>
+          <span>vaani</span>
+        </a>
+        <p>Bookings, by voice.</p>
+        <nav aria-label="Footer navigation">
+          <a href="#how">How it works</a>
+          <a href="#services">Services</a>
+          <a href="#example">Example</a>
+          <a href="#languages">Languages</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Vaani</span>
+        <span>Examples on this page are simulated.</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
