@@ -1,0 +1,15 @@
+**
+!backend/
+!backend/**
+!data/
+!data/**
+!supabase/
+!supabase/**
+!pyproject.toml
+!uv.lock
+!README.md
+!.python-version
+**/__pycache__
+backend/eval/recordings/**
+supabase/.temp/**
+supabase/.branches/**

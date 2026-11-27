@@ -1,33 +1,32 @@
-# Vaani — docker compose skeleton.
-# Phase 0: services are declared but their Dockerfiles land in Phase 7.
-# Supabase runs separately via its own CLI stack (`supabase start`) in local dev,
-# or as a hosted project; both services read its URL/keys from .env.
-
 services:
   backend:
-    # FastAPI + Pipecat voice server (REST, /webrtc/offer, /twilio/inbound, /ws/twilio)
     build:
       context: .
-      dockerfile: backend/Dockerfile   # added in Phase 7
-    env_file: .env
+      dockerfile: backend/Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      VAANI_DEV_DB: ${VAANI_DEV_DB:-ephemeral}
     ports:
       - "8000:8000"
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
       interval: 10s
       timeout: 3s
-      retries: 5
+      retries: 8
 
   frontend:
-    # Next.js app (mini-sites, partner portals, studio, logs, eval)
     build:
       context: ./frontend
-      dockerfile: Dockerfile           # added in Phase 7
-    env_file: .env
+      args:
+        NEXT_PUBLIC_DATA_MODE: ${NEXT_PUBLIC_DATA_MODE:-mock}
+        NEXT_PUBLIC_BACKEND_URL: ${NEXT_PUBLIC_BACKEND_URL:-http://localhost:8000}
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:-}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY:-}
+        NEXT_PUBLIC_VAANI_PHONE: ${NEXT_PUBLIC_VAANI_PHONE:-}
+        NEXT_PUBLIC_DEV_SIMULATE: ${NEXT_PUBLIC_DEV_SIMULATE:-false}
     environment:
-      NEXT_PUBLIC_BACKEND_URL: http://localhost:8000
+      HOSTNAME: 0.0.0.0
     ports:
       - "3000:3000"
-    depends_on:
-      backend:
-        condition: service_healthy

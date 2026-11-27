@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --background: #fbf5e9;
+  --foreground: #231b17;
+  --primary: #945100;
+  --primary-foreground: #fff8ec;
+  --muted: #eee3d3;
+  --muted-foreground: #625449;
+  --border: #d8cabb;
+  --ring: #945100;
+  --live: #17665c;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #111720;
+  --foreground: #fff0d7;
+  --primary: #f4ba5a;
+  --primary-foreground: #281901;
+  --muted: #1d2632;
+  --muted-foreground: #c5bcae;
+  --border: #434851;
+  --ring: #f4ba5a;
+  --live: #65cbbd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-live: var(--live);
+  --font-sans: "Inter Variable", "Anek Telugu Variable", "Anek Devanagari Variable", system-ui, sans-serif;
+  --font-display: "Anek Latin Variable", "Anek Telugu Variable", "Anek Devanagari Variable", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body:has([data-tv="true"]) .vaani-shell-header { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

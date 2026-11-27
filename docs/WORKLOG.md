@@ -20,6 +20,15 @@ Baseline on `main`: **195 passed** · ruff ✓ · mypy ✓ · eval 40/40 (placeh
 
 ## Entries
 
+### 2026-11-27 12:46 IST · Phase 5 · Akshit via Codex · handed off
+**Branch:** feat/vaani-demo-integration
+**Goal:** Integrate the frontend foundation with upstream booking and voice flows.
+**Done:** Integrated the frontend foundation with public availability, booking status, mock payments, partner access, restaurant and hospital schedules, TV mode, Studio replay, call logs and evaluation. Added Docker build files and Compose wiring.
+**Checks:** Node smoke run passed both replays, booking notifications, slot release, mock payment, doctor leave, call logs, live catalogue mapping and Realtime frame handling. Changed frontend routes and modules passed TypeScript checking with cached framework types. The locked npm install failed because matching package tarballs were missing locally and the npm registry was unreachable. Playwright and Docker builds are pending.
+**Decisions:** Live-mode booking views use FastAPI refreshes and the existing browser voice console. Call logs use the Supabase demo read policy. Supabase Realtime notifications invalidate live booking, availability, and call-list reads; timed polling provides a fallback. The evaluation page uses the existing 23 Nov measurements.
+**Pending:** Integrate the user’s DeepSeek Harness landing once its source is identified, verify full builds and Playwright, verify hosted Supabase Realtime, test with a real microphone, and finish Twilio/WhatsApp, test-provider payments, deployment and submission assets.
+**Publishing blocker:** The GitHub integration returned HTTP 403 for branch creation and blob uploads. A local patch is available against upstream main.
+
 ### 2026-11-23 18:05 IST · Free LLM (Groq) · Pranav via Claude Code · done (18:26 IST)
 **Branch:** `llm-groq-free` (from `main` @ `5eaa7b4`) · **Commits:** see `git log main..llm-groq-free`
 **Goal:** cut LLM cost and latency with Groq's free tier (key in `.env` as `LLM_API_KEY`; never committed).

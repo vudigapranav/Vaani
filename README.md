@@ -109,6 +109,10 @@ How it works: one Pipecat pipeline per call. Sarvam STT (saaras, romanised outpu
 
 Website setup steps are added as later phases land (Phase 7: one-command `docker compose up`).
 
+## Run the frontend demo
+
+With Docker Compose 2.24 or newer, run `docker compose up --build` and open http://localhost:3000. The frontend defaults to mock mode with scripted calls and booking updates. The backend defaults to a throwaway seeded Postgres instance when no `SUPABASE_DB_URL` is configured. For npm commands, live settings and demo passcodes, see [frontend/README.md](frontend/README.md).
+
 ## Evaluation
 
 Measured, not just demoed — see [EVAL.md](EVAL.md) (booking accuracy by language, top-3 relevance, emergency and unsupported-area handling, latency, barge-in, naturalness, live sync, cost per minute).
